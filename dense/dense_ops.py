@@ -37,7 +37,7 @@ def matmul_tiling(A, B, C, block=64):
                         for j in range(jj, j_max):
                             C[i][j] += aik * B[k][j]
 
-def matmul_numpy(A, B):
+def matmul_numpy(A, B, C):
     A_np = np.array(A, dtype=float)
     B_np = np.array(B, dtype=float)
     _ = A_np @ B_np
